@@ -1,6 +1,7 @@
 import express from 'express'
 import userRouter from './routes/users'
-import upload from 'express-fileupload'
+import uploadRouter from './routes/upload'
+
 const app = express()
 app.use(express.json()) // middleware that turns req.body into json
 const PORT = 9999
@@ -10,9 +11,15 @@ app.get('/ping', (_, res) => {
   res.send('Pong')
 })
 
+/**
+ * Redirects all functions from users.ts to /users route
+ */
 app.use('/users', userRouter)
 
-app.use(upload())
+/**
+ * Redirects all functions from upload.ts to /upload route
+ */
+app.use('/upload', uploadRouter)
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
