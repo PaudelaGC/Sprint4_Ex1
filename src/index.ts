@@ -1,6 +1,7 @@
 import express from 'express'
 import userRouter from './routes/users'
 import uploadRouter from './routes/upload'
+import timeRouter from './routes/time'
 
 const app = express()
 app.use(express.json()) // middleware that turns req.body into json
@@ -21,6 +22,13 @@ app.use('/users', userRouter)
  */
 app.use('/upload', uploadRouter)
 
+/**
+ * Redirects all functions from time.ts to /time route
+ */
+app.use('/time', timeRouter)
+
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 })
+
+export default PORT

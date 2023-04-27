@@ -6,8 +6,8 @@ import fileSaver from '../middlewares/fileSaver'
 const router = express.Router()
 
 /**
- * Allows file upload, checks if there is any upload, checks the file extension and saves it in /files
- * Multiple files can be uploaded at the same time
+ * Allows file upload, checks if there is any upload, checks the file extension and saves it in /files.
+ * Multiple files can be uploaded at the same time.
  */
 router.post('/', fileUpload(), fileExists(), fileExtensionLimiter(), fileSaver())
 
