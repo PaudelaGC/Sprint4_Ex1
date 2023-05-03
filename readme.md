@@ -1,14 +1,14 @@
 # NPM installs
-_express, express-fileupload, axios, nodemon (already installed in this project)
+_express, express-fileupload, axios, nodemon (already installed in this project)_
 
 ## File hierarchy
 
-_First layer: 
-  - _Files: empty folder to contain images uploaded
-  - _node-modules
-  - _src: all source code (contains the second layer)
-  - _.gitignore
-  - _package-lock.json: node-modules packages
+_First layer:_
+  - _Files: empty folder to contain images uploaded_
+  - _node-modules_
+  - _src: all source code (contains the second layer)_
+  - _.gitignore_
+  - _package-lock.json: node-modules packages_
   - _package.json: scripts and dependencies from packages
   - _tsconfig.json: typescript preferences
 _Second layer (src):
