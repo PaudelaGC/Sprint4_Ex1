@@ -2,6 +2,9 @@ import express from 'express'
 
 const router = express.Router()
 
+/**
+ * Gets the user info and the original url call
+ */
 router.get('/', (req, res) => {
   const host = req.get('host') as string
   const route = req.originalUrl

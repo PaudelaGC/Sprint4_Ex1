@@ -3,6 +3,9 @@ import axios from 'axios'
 
 const router = express.Router()
 
+/**
+ * Retrieves information from the pokeapi based on the id provided
+ */
 router.get('/:id', (req, res) => {
   const id = req.params.id
   axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then(resp => {
