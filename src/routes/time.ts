@@ -2,9 +2,10 @@ import express, { Request, Response } from 'express'
 import fileUpload from 'express-fileupload'
 import routerCache from '../routerCache'
 import CORS from '../enableCORS'
+import authenticate from '../authenticate'
 const router = express.Router()
 
-router.post('/', fileUpload(), routerCache(), CORS(), (req: Request, res: Response) => {
+router.post('/', authenticate(), fileUpload(), routerCache(), CORS(), (req: Request, res: Response) => {
   if (req.body.name !== '' && 'name' in req.body) {
     const d = new Date().toString()
     const userTime = {
