@@ -9,9 +9,9 @@ _First layer:_
   - _src: all source code (contains the second layer)_
   - _.gitignore_
   - _package-lock.json: node-modules packages_
-  - _package.json: scripts and dependencies from packages
-  - _tsconfig.json: typescript preferences
-_Second layer (src):
+  - _package.json: scripts and dependencies from packages_
+  - _tsconfig.json: typescript preferences_
+_Second layer (src):_
   - _index: server's boot up and main configurations for routes and ports
   - _routes: endpoints to call from http request (contains the third layer)
   - _middlewares: functions that are applied on specific endpoints (contains the third layer)
