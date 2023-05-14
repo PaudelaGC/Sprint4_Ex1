@@ -1,9 +1,7 @@
 import express from 'express'
-/* import userRouter from './routes/users'
- */import uploadRouter from './routes/upload'
-import timeRouter from './routes/time'
-import pokemonRouter from './routes/pokemon'
 import playersRouter from './routes/players'
+import gamesRouter from './routes/games'
+import rankingRouter from './routes/ranking'
 
 const app = express()
 app.use(express.json()) // middleware that turns req.body into json
@@ -19,20 +17,9 @@ app.get('/ping', (_, res) => {
  */
 app.use('/players', playersRouter)
 
-/**
- * Redirects all functions from pokemon.ts to /pokemon route
- */
-app.use('/pokemon', pokemonRouter)
+app.use('/games', gamesRouter)
 
-/**
- * Redirects all functions from upload.ts to /upload route
- */
-app.use('/upload', uploadRouter)
-
-/**
- * Redirects all functions from time.ts to /time route
- */
-app.use('/time', timeRouter)
+app.use('/ranking', rankingRouter)
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
