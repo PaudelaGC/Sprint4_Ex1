@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import readData from '../middlewares/readData'
+import readData from '../logic/readData'
 
 const checkIfAvailable = () => {
   return (req: Request, res: Response, next: NextFunction) => {
@@ -9,6 +9,7 @@ const checkIfAvailable = () => {
       if (Object.values(user).includes(username, 1) ||
       username.length === 0) {
         return res.status(401).send('This username is not available')
+        //Throw an error
       }
     }
     return next()

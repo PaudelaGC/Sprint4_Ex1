@@ -1,11 +1,11 @@
 import express from 'express'
-import readData from '../middlewares/readData'
-import updateData from '../middlewares/updateData'
+import readData from '../logic/readData'
+import updateData from '../logic/updateData'
 import fileUpload from 'express-fileupload'
 import checkIfAvailable from '../middlewares/checkIfAvailable'
-import checkHighestId from '../middlewares/checkHighestId'
+import checkHighestId from '../logic/checkHighestId'
 import checkValidId from '../middlewares/checkValidId'
-import returnUserById from '../middlewares/returnUserById'
+import returnUserById from '../logic/returnUserById'
 
 const router = express.Router()
 

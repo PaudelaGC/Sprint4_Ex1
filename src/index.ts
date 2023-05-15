@@ -21,6 +21,8 @@ app.use('/games', gamesRouter)
 
 app.use('/ranking', rankingRouter)
 
+//Catch errors from middlewares and bad user requests
+
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 })
